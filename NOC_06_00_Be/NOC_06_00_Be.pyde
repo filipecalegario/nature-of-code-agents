@@ -6,10 +6,6 @@
 
 # Draws a "vehicle" on the screen
 
-# Implements Craig Reynold's autonomous steering behaviors
-# One vehicle "seeks"
-# See: http://www.red3d.com/cwr/
-
 from Vehicle import Vehicle
 
 def setup():
