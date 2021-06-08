@@ -28,21 +28,6 @@ class Vehicle():
         # We could add mass here if we want A = F / M
         self.acceleration.add(force)
 
-    # A method that calculates a steering force towards a target
-    # STEER = DESIRED MINUS VELOCITY
-    def seek(self, target):
-
-        # A vector pointing from the location to the target
-        desired = target - self.position
-
-        # Scale to maximum speed
-        desired.setMag(self.maxspeed)
-
-        steer = desired - self.velocity
-        steer.limit(self.maxforce)  # Limit to maximum steering force
-
-        self.applyForce(steer)
-
     def display(self):
         # Draw a triangle rotated in the direction of velocity
         theta = self.velocity.heading()# + PI / 2
